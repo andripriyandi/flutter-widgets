@@ -70,7 +70,7 @@ class DateTimeAxis extends ChartAxis {
       double? maximumLabelWidth,
       double? labelsExtent,
       this.autoScrollingDeltaType = DateTimeIntervalType.auto,
-      int? autoScrollingDelta,
+      double? autoScrollingDelta,
       double? borderWidth,
       Color? borderColor,
       AxisBorderType? axisBorderType,
