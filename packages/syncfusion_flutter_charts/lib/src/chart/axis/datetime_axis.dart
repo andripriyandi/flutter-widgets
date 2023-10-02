@@ -1044,13 +1044,14 @@ class DateTimeAxisDetails extends ChartAxisRendererDetails {
           dateTimeAxis.autoScrollingDeltaType == DateTimeIntervalType.auto
               ? actualIntervalType
               : dateTimeAxis.autoScrollingDeltaType;
-      double scrollingDelta;
+      int scrollingDelta;
       DateTime dateTime =
           DateTime.fromMillisecondsSinceEpoch(visibleRange!.maximum);
       switch (intervalType) {
         case DateTimeIntervalType.years:
           dateTime = DateTime(
-              dateTime.year - dateTimeAxis.autoScrollingDelta!,
+              dateTime.year -
+                  int.parse(dateTimeAxis.autoScrollingDelta!.toString()),
               dateTime.month,
               dateTime.day,
               dateTime.hour,
@@ -1064,7 +1065,8 @@ class DateTimeAxisDetails extends ChartAxisRendererDetails {
         case DateTimeIntervalType.months:
           dateTime = DateTime(
               dateTime.year,
-              dateTime.month - dateTimeAxis.autoScrollingDelta!,
+              dateTime.month -
+                  int.parse(dateTimeAxis.autoScrollingDelta!.toString()),
               dateTime.day,
               dateTime.hour,
               dateTime.minute,
@@ -1075,31 +1077,36 @@ class DateTimeAxisDetails extends ChartAxisRendererDetails {
               visibleRange!.maximum - dateTime.millisecondsSinceEpoch;
           break;
         case DateTimeIntervalType.days:
-          scrollingDelta =
-              Duration(days: dateTimeAxis.autoScrollingDelta!).inMilliseconds;
+          scrollingDelta = Duration(
+                  days: int.parse(dateTimeAxis.autoScrollingDelta!.toString()))
+              .inMilliseconds;
           break;
         case DateTimeIntervalType.hours:
           scrollingDelta =
-              Duration(hours: dateTimeAxis.autoScrollingDelta!).inMilliseconds;
-          break;
-        case DateTimeIntervalType.minutes:
-          scrollingDelta = Duration(minutes: dateTimeAxis.autoScrollingDelta!)
-              .inMilliseconds;
-          break;
-        case DateTimeIntervalType.seconds:
-          scrollingDelta = Duration(seconds: dateTimeAxis.autoScrollingDelta!)
-              .inMilliseconds;
-          break;
-        case DateTimeIntervalType.milliseconds:
-          scrollingDelta =
-              Duration(milliseconds: dateTimeAxis.autoScrollingDelta!)
+              Duration(hours: int.parse(dateTimeAxis.autoScrollingDelta!.toString()))
                   .inMilliseconds;
           break;
+        case DateTimeIntervalType.minutes:
+          scrollingDelta =
+              Duration(minutes: int.parse(dateTimeAxis.autoScrollingDelta!.toString()))
+                  .inMilliseconds;
+          break;
+        case DateTimeIntervalType.seconds:
+          scrollingDelta =
+              Duration(seconds: int.parse(dateTimeAxis.autoScrollingDelta!.toString()))
+                  .inMilliseconds;
+          break;
+        case DateTimeIntervalType.milliseconds:
+          scrollingDelta = Duration(
+                  milliseconds: int.parse(dateTimeAxis.autoScrollingDelta!.toString()))
+              .inMilliseconds;
+          break;
         case DateTimeIntervalType.auto:
-          scrollingDelta = dateTimeAxis.autoScrollingDelta!;
+          scrollingDelta = int.parse(dateTimeAxis.autoScrollingDelta!.toString());
           break;
       }
-      super.updateAutoScrollingDelta(scrollingDelta, axisRenderer);
+      super
+          .updateAutoScrollingDelta(double.parse(scrollingDelta.toString()), axisRenderer);
     }
   }
 }
