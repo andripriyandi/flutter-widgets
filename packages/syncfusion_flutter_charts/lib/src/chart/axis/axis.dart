@@ -2278,7 +2278,7 @@ class ChartAxisRendererDetails {
 
   /// Auto scrolling feature
   void updateAutoScrollingDelta(
-      int scrollingDelta, ChartAxisRenderer axisRenderer) {
+      double scrollingDelta, ChartAxisRenderer axisRenderer) {
     this.scrollingDelta = scrollingDelta;
     switch (axis.autoScrollingMode) {
       case AutoScrollingMode.start:
