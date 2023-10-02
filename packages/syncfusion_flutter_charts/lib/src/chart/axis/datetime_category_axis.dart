@@ -71,7 +71,7 @@ class DateTimeCategoryAxis extends ChartAxis {
       this.dateFormat,
       this.intervalType = DateTimeIntervalType.auto,
       this.autoScrollingDeltaType = DateTimeIntervalType.auto,
-      int? autoScrollingDelta,
+      double? autoScrollingDelta,
       double? borderWidth,
       Color? borderColor,
       AxisBorderType? axisBorderType,
