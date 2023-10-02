@@ -844,7 +844,7 @@ abstract class ChartAxis {
   ///    );
   ///}
   ///```
-  final int? autoScrollingDelta;
+  final double? autoScrollingDelta;
 
   /// Determines whether the axis should be scrolled from the start position or end position.
   ///
