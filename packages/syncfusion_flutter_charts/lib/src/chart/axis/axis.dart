@@ -2101,7 +2101,7 @@ class ChartAxisRendererDetails {
   num? visibleMinimum, visibleMaximum;
 
   /// Specifies the scrolling delta value
-  int? scrollingDelta;
+  double? scrollingDelta;
 
   /// Returns the axis label angle
   int getAxisLabelAngle(
