@@ -1044,7 +1044,7 @@ class DateTimeAxisDetails extends ChartAxisRendererDetails {
           dateTimeAxis.autoScrollingDeltaType == DateTimeIntervalType.auto
               ? actualIntervalType
               : dateTimeAxis.autoScrollingDeltaType;
-      int scrollingDelta;
+      double scrollingDelta;
       DateTime dateTime =
           DateTime.fromMillisecondsSinceEpoch(visibleRange!.maximum);
       switch (intervalType) {
