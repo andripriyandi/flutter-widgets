@@ -64,7 +64,7 @@ class CategoryAxis extends ChartAxis {
       RangeController? rangeController,
       double? maximumLabelWidth,
       double? labelsExtent,
-      int? autoScrollingDelta,
+      double? autoScrollingDelta,
       double? borderWidth,
       Color? borderColor,
       AxisBorderType? axisBorderType,
