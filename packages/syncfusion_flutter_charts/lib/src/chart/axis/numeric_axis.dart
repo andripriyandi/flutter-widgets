@@ -72,7 +72,7 @@ class NumericAxis extends ChartAxis {
       RangeController? rangeController,
       double? maximumLabelWidth,
       double? labelsExtent,
-      int? autoScrollingDelta,
+      double? autoScrollingDelta,
       AutoScrollingMode? autoScrollingMode,
       double? borderWidth,
       Color? borderColor,
